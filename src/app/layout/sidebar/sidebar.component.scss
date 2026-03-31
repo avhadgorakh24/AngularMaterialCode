@@ -1,0 +1,119 @@
+@use '@angular/material' as mat;
+
+.sidebar-wrapper {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.is-collapsed {
+    width: 80px;
+    
+    .nav-item {
+      justify-content: center;
+      padding: 0;
+      margin: 4px 16px;
+    }
+  }
+}
+
+.nav-header {
+  padding: 16px 24px;
+  opacity: 0.7;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-item {
+  margin: 4px 12px;
+  border-radius: 12px;
+  height: 48px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateX(4px);
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  &.active-link {
+    background-color: rgba(63, 81, 181, 0.1);
+    color: #3f51b5;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 15%;
+      height: 70%;
+      width: 4px;
+      background-color: #3f51b5;
+      border-radius: 0 4px 4px 0;
+    }
+
+    mat-icon {
+      color: #3f51b5;
+    }
+  }
+
+  mat-icon {
+    margin-right: 0 !important;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover mat-icon {
+    transform: scale(1.1);
+  }
+}
+
+.nav-label {
+  margin-left: 16px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.nav-divider {
+  margin: 16px 12px;
+  opacity: 0.1;
+}
+
+.logout-item {
+  margin-top: auto;
+  margin-bottom: 24px;
+  
+  &:hover {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    
+    mat-icon {
+      color: #f44336;
+    }
+  }
+}
+
+// Theme-specific overrides handled via theme.scss
+:host-context(.dark-theme) {
+  .nav-item {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    &.active-link {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      
+      &::before {
+        background-color: #fff;
+      }
+      
+      mat-icon {
+        color: #fff;
+      }
+    }
+  }
+}

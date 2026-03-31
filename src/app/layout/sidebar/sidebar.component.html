@@ -1,0 +1,27 @@
+<div class="sidebar-wrapper" [class.is-collapsed]="isCollapsed">
+  <mat-nav-list>
+    <div class="nav-header" *ngIf="!isCollapsed">
+      <h3 mat-subheader>Main Menu</h3>
+    </div>
+
+    <mat-list-item 
+      *ngFor="let link of navLinks" 
+      [routerLink]="link.path" 
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact: true}"
+      [matTooltip]="isCollapsed ? link.label : ''"
+      matTooltipPosition="right"
+      class="nav-item"
+    >
+      <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
+      <div matListItemTitle *ngIf="!isCollapsed" class="nav-label">{{ link.label }}</div>
+    </mat-list-item>
+
+    <mat-divider class="nav-divider"></mat-divider>
+
+    <mat-list-item (click)="onLogout()" class="nav-item logout-item" [matTooltip]="isCollapsed ? 'Logout' : ''" matTooltipPosition="right">
+      <mat-icon matListItemIcon>logout</mat-icon>
+      <div matListItemTitle *ngIf="!isCollapsed" class="nav-label">Logout</div>
+    </mat-list-item>
+  </mat-nav-list>
+</div>

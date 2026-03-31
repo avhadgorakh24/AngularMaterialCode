@@ -1,0 +1,51 @@
+
+
+/* Title */
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #2f3b66;
+    margin-bottom: 25px;
+}
+
+/* Create box */
+.create-card{
+    width: 280px;
+    height: 200px;
+    border: 2px dashed #6c79b8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #f9faff;
+}
+
+/* Hover effect */
+.create-card:hover{
+    background: #eef1ff;
+    transform: scale(1.02);
+}
+
+/* Plus circle */
+.icon-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e6e9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #3a4ab6;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.create-text{
+    font-size: 14px;
+    color: #2f3b66;
+    font-weight: 500;
+}

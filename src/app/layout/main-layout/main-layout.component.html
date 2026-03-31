@@ -1,0 +1,24 @@
+<div class="main-layout">
+  <app-header (toggleSidebar)="toggleSidebar()" class="fixed-header"></app-header>
+  
+  <mat-sidenav-container class="sidenav-container" autosize>
+    <mat-sidenav #sidenav 
+      [mode]="isHandset ? 'over' : 'side'" 
+      [opened]="!isHandset"
+      class="sidenav"
+      [class.is-collapsed]="isCollapsed && !isHandset"
+    >
+      <app-sidebar [isCollapsed]="isCollapsed && !isHandset"></app-sidebar>
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="content-area">
+      <main class="main-content">
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <div class="footer-wrapper fixed-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

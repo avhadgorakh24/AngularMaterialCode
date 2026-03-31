@@ -1,0 +1,47 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; // Fixed height to viewport
+  overflow: hidden; // Prevent overall body scroll
+}
+
+.fixed-header {
+  flex-shrink: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidenav-container {
+  flex: 1; // Middle area fills remaining space
+  overflow: hidden;
+}
+
+.sidenav {
+  width: 250px;
+  border-right: 1px solid transparent;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+
+  &.is-collapsed {
+    width: 80px;
+  }
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto; // Allow content to scroll
+}
+
+.main-content {
+  flex: 1;
+  padding: 10px 24px;
+  box-sizing: border-box;
+}
+
+.fixed-footer {
+  flex-shrink: 0;
+  z-index: 1000;
+  border-top: 1px solid transparent; // Themed in theme.scss
+}

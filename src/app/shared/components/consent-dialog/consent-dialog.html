@@ -1,0 +1,40 @@
+<div class="dialog-container">
+
+  <!-- Header -->
+  <div class="dialog-header">
+    Consent & Undertaking
+  </div>
+
+  <!-- Content -->
+  <div class="dialog-content">
+
+    <p>
+      By proceeding ahead from here, you hereby undertake and confirm that the
+      information and data furnished by you to the platform is true and correct.
+    </p>
+
+    <p>
+      The platform has been integrated with credit information companies and
+      agencies to conduct credit checks. By proceeding, you authorize sharing
+      of personal information for credit report purposes.
+    </p>
+
+    <!-- Checkbox -->
+    <mat-checkbox [(ngModel)]="isChecked">
+      I Have Read And Agree To The Terms & conditions.
+    </mat-checkbox>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="dialog-footer">
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!isChecked"
+      (click)="onAgree()">
+      Agree
+    </button>
+  </div>
+
+</div>

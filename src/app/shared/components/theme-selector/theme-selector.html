@@ -1,0 +1,15 @@
+<mat-radio-group
+  [value]="themeService.currentThemeValue()"
+  (change)="changeTheme($event.value)">
+
+  <div *ngFor="let theme of themes" class="theme-row">
+
+    <mat-radio-button [value]="theme.value">
+      {{ theme.name }}
+    </mat-radio-button>
+
+    <div class="color-box" [style.background]="theme.color"></div>
+
+  </div>
+
+</mat-radio-group>

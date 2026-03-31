@@ -1,0 +1,38 @@
+.dialog-container {
+  width: 500px;
+  max-width: 90vw;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Header */
+.dialog-header {
+  background: #3f3f8f;
+  color: #fff;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Content */
+.dialog-content {
+  padding: 16px;
+  font-size: 14px;
+  color: #444;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Footer */
+.dialog-footer {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Button */
+button {
+  width: 200px;
+  height: 45px;
+  font-weight: 600;
+}

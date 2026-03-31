@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+
+/* Apply Angular Material Material-3 theme */
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
+  /* Default to light theme */
+  color-scheme: light;
+
+  /* Material system variables */
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  /* Reset browser default margin */
+  margin: 0;
+}

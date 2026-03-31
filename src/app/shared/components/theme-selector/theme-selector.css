@@ -1,0 +1,13 @@
+.theme-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 5px;
+  width:250px;
+}
+
+.color-box{
+  width:30px;
+  height:20px;
+  border-radius:4px;
+}

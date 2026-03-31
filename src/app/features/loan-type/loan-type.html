@@ -1,0 +1,28 @@
+<div class="loan-page">
+
+  <h2 class="page-title">
+    Select the loan type as per your requirement
+  </h2>
+
+  <div class="loan-badge">Business Loan</div>
+
+  <div class="loan-grid">
+
+    <!-- ✅ Dynamic Cards -->
+    <div class="loan-card" *ngFor="let loan of loanTypes">
+
+      <div class="loan-icon">{{ loan.icon }}</div>
+
+      <h3>{{ loan.title }}</h3>
+
+      <p>{{ loan.description }}</p>
+
+      <button class="apply-btn" (click)="applyNow(loan)">
+        Apply Now →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

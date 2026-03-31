@@ -1,0 +1,17 @@
+
+@import './styles/theme.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; transition: background-color 0.3s ease; }
+
+/* Global Material Overrides or Utility Classes */
+.spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  padding: 24px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
